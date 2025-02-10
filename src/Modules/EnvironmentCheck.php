@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 class EnvironmentCheck {
     
     public function __construct() {
-        add_action('admin_init', [$this, 'check_environment']);
+        //add_action('admin_init', [$this, 'check_environment']);
     }
 
     public function check_environment() {

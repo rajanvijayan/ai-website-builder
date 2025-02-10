@@ -13,6 +13,11 @@ class FinalStep {
     }
 
     public static function complete_setup() {
+
+        $sitename = get_transient('ai_site_name');
+        // Set blogname to sitename
+        update_option('blogname', $sitename);
+
         // Placeholder for final setup completion
         return "Final Setup Completed";
     }

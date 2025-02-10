@@ -46,7 +46,7 @@ class PageBuilder {
             $sections = $menu['Section'];
 
             $images = $pixabayClient->getImages(['q' => $category, 'per_page' => 10], true);
-            error_log(print_r($images['hits'], true));
+            // error_log(print_r($images['hits'], true));
 
             $image_url = '';
             foreach( $images['hits'] as $image ) {
@@ -62,7 +62,7 @@ class PageBuilder {
             $prompt .= 'for '.$sitename.' website. And this is site category: '.$category.'. This is business description '.$description.'.';
             $prompt .= 'Use randomly any 3 images from following '.$image_url.' images and relevant content for each section. It should be HTML format';
 
-            error_log($prompt);
+            // error_log($prompt);
 
             // Generate content for the menu
             $content = $ai_client->generateContent($prompt);
@@ -91,6 +91,12 @@ class PageBuilder {
             );
 
             wp_update_nav_menu_item($menu_id, 0, $menu_item);
+
+            // if $menu_name is home menu then set it as front page
+            if ($menu_name == 'Home') {
+                update_option('page_on_front', $page_id);
+                update_option('show_on_front', 'page');
+            }
 
         }
         return "Pages Generated";

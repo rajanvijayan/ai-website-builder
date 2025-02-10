@@ -47,7 +47,7 @@ class SiteMapGenerator {
         $ai_client = new AIEngine($api_key);
 
         // Prepare prompt 
-        $prompt = 'Generate JSON for '.$sitename.' website with '.$category.' category and '.$description.' description. It should be a JSON file for following format and must atleast contain 5 menus and 3-4 sections in each menu.
+        $prompt = 'Generate JSON for '.$sitename.' website with '.$category.' category and '.$description.' description. It should be a JSON file for following format and must atleast contain 5 menus includes home menu and 3-4 sections in each menu.
         {
             Website: "Website Name",
             Menu: [
