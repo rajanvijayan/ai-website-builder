@@ -1,0 +1,124 @@
+/* Hide WordPress Admin Menu when popup is open */
+body.popup-active #adminmenu,
+body.popup-active #wpadminbar {
+    display: none !important;
+}
+
+/* Full-screen overlay */
+.builder-popup-overlay { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    background: rgba(255, 255, 255, 1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 9999; 
+}
+
+/* Popup container */
+.builder-popup { 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    width: 400px; 
+    max-width: 90%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    text-align: center; 
+}
+
+/* Form Styles */
+.builder-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+.builder-popup label {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+.builder-popup input,
+.builder-popup select, 
+.builder-popup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Textarea Styling */
+.builder-popup textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.builder-popup button {
+    background: #0073aa; 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background 0.3s;
+}
+
+.builder-popup button:hover {
+    background: #005177;
+}
+
+.builder-progress-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.builder-progress {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.builder-progress ul {
+    list-style: none;
+    padding: 0;
+}
+
+.builder-progress li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.builder-progress .status {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#visit-site-btn {
+    margin-top: 15px;
+}

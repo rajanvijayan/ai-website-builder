@@ -1,0 +1,21 @@
+{
+    "name": "rajanvijayan/ai-website-builder",
+    "description": "AI Website Builder Plugin",
+    "type": "wordpress-plugin",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "AIWebsiteBuilder\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "rajanvijayan/ai-engine": "dev-main",
+        "zoonman/pixabay-php-api": "^2.0"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Composer\\Installer\\PluginInstaller::postAutoloadDump"
+        ]
+    }
+}
